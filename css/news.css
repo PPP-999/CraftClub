@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+/*-----------------------second-common----------------------------*/
+
+#main-wrapper{
+  margin-top: 120px;
+}
+
+.wave-background{
+  width: 100%;
+  height: 110px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.content-area{
+  padding-bottom: 100px;
+}
+
+h2{
+  margin: 200px 0;
+  font-size: 2.7rem;
+}
+
+h2 span{
+  font-size: 1.6rem;
+}
+
+/*-----------------------food-slide----------------------------*/
+
+#canvas1{
+  background-color: rgba(0,0,0,0);
+  height: 200px;
+}
+
+#news-slide .content-area{
+  width: 100%;
+  height: auto;
+  padding: 50px 2%;
+  background-color: #f1a725;
+}
+
+#news-line1,
+#news-line2,
+#news-line3{
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.news-box{
+  flex-basis: 23.5%;
+  margin-right: 2%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #d6c6af;
+  margin-bottom: 60px;
+}
+
+.news4{
+  margin-right: 0
+}
+
+.news-box p img{
+  border-radius: 10px;
+}
+
+.news-info{
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #d6c6af;
+}
+
+.news-info dt{
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.news-info dd{
+  font-size: 1.1rem;
+}
+
+
+
+/*----------------------responsive----------------------------*/
+
+
+
+@media screen and (min-width:641px) and (max-width:960px){
+
+  .news-box{
+    padding: 20px 2%;
+  }
+
+  .news-info{
+    padding: 20px 0 0;
+  }
+
+  .news-info dt{
+    margin-bottom: 10px;
+  }
+}
+
+
+
+@media screen and (min-width:320px) and (max-width:640px) {
+
+  #news-slide .content-area{
+    padding: 50px 10%;
+  }
+
+  #news-line1,
+  #news-line2,
+  #news-line3{
+    display: block;
+  }
+
+  .news-box{
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .news-box p,
+  .news-info{
+    float: left;
+    width: 45%;
+    height: auto;
+  }
+
+  .news-info{
+    padding: 0 0 0 5%;
+  }
+
+  .news-info dt,
+  .news-info dd{
+    text-align: left;
+  }
+
+  .news-info dt{
+    font-size: calc(1.4rem + ((1vw - 0.64rem) * 0.7143));
+  }
+
+  .news-info dd{
+    font-size: calc(1.1rem + ((1vw - 0.64rem) * 0.7143))
+  }
+
+  .news-box::after,
+  .news-box p::after,
+  .news-info::after{
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
