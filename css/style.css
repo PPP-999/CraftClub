@@ -68,6 +68,7 @@ h2 span{
   background-position: center;
   background-size: cover;
   padding: 100px 0 200px;
+  position: relative;
 }
 
 .visual-logo{
@@ -82,16 +83,13 @@ h2 span{
 
 #canvas1{
   position: absolute;
-  top: 500px;
+  bottom: 0;
   background-color: rgba(0,0,0,0);
+  height: 200px;
 }
 
 #what-slide .inner{
   background-color: #f1a725;
-}
-
-#what-slide .inner{
-  margin-top: 50px
 }
 
 #what-slide .content-area{
@@ -128,26 +126,33 @@ h2 span{
 }
 
 #menu-slide .content-area{
+  display: flex;
   padding: 0 30px;
   width: 100%;
   height: auto;
   font-size: 1.8rem;
   font-weight: bold;
-  background: url(../images/menu-background.jpg) no-repeat;
-  background-position: left -100px top 0;
-  background-size: 70%;
 }
 
-#menu-slide .content-area p:first-child{
+#menu-slide .menu-photo{
+  width: 40%;
+}
+
+#menu-slide .menu-photo img{
+  width: 140%;
+}
+
+#menu-slide .text-area p:first-child{
   font-size: 2.8rem;
   margin-bottom: 40px;
 }
 
 #menu-slide .text-area{
-  color: #000;
-  padding-left: 40%;
+  color: #fff;
+  width: 60%;
+  padding-left: 50px;
   margin-bottom: 80px;
-  line-height: 60px;
+  line-height: 40px;
 }
 
 #menu-slide .text-area p{
@@ -349,15 +354,27 @@ text-align: left;
     font-size: calc(1.5rem + ((1vw - 0.64rem) * 0.7143));
     background-size: 120%;
     background-position: center top 0;
+    position: relative;
   }
 
-  #menu-slide .content-area p:first-child{
-    font-size:
+  #menu-slide .menu-photo{
+    position: absolute;
+    width: 90%;
+  }
+
+  #menu-slide .menu-photo img{
+    width: 100%
   }
 
   #menu-slide .text-area{
     padding-left: 0%;
-    line-height: 4.5rem;
+    line-height: calc(3rem + ((1vw - 0.64rem) * 1.4204));;
+    position: relative;
+    width: 100%;
+  }
+
+  #menu-slide .text-area p:first-child{
+    margin-bottom: 140px;
   }
 
   #menu-slide .btn-area{
@@ -412,10 +429,9 @@ text-align: left;
 
 /*-----------------------what-slide----------------------------*/
 
-
   #what-slide .content-area{
     font-size: calc(1.6rem + ((1vw - 0.64rem) * 0.7143));
-    padding: 100px 3% 0;
+    padding: 100px 3% 50px;
   }
 
   #what-slide .content-area p:nth-child(2){
@@ -424,6 +440,10 @@ text-align: left;
 
   #what-slide .text-area{
     margin-bottom: 50px;
+  }
+
+  #what-area .arrow_btn{
+    margin-bottom: 100px;
   }
 
 
@@ -435,6 +455,17 @@ text-align: left;
     background-size: 160%;
     background-position: center bottom -50px;
     padding: 0 3%;
+    position: relative;
+  }
+
+  #menu-slide .menu-photo{
+    position: absolute;
+    width: 90%;
+  }
+
+  #menu-slide .menu-photo img{
+    width: 60%;
+    margin: 0 auto;
   }
 
   #menu-slide .content-area p:first-child{
@@ -444,6 +475,9 @@ text-align: left;
   #menu-slide .text-area{
     padding-left: 0%;
     line-height: 3.5rem;
+    width: 100%;
+    position: relative;
+    padding-top: 100px;
   }
 
   #menu-slide .btn-area{

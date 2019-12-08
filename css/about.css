@@ -16,19 +16,28 @@
 
 h2{
   margin: 200px 0;
-  font-size: 27px;
+  font-size: 2.7rem;
 }
 
 h2 span{
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 h3{
-  font-size: 25px;
+  font-size: 2.5rem;
 }
 
 h3 span{
-  font-size: 13px;
+  font-size: 1.3rem;
+}
+
+h4{
+  font-size: 4rem;
+  line-height: 3.8rem;
+}
+
+h4 span{
+  font-size: 3rem
 }
 
 /*-----------------------what-slide----------------------------*/
@@ -69,6 +78,7 @@ h3 span{
 .truth-area .truth-text{
   width: 65%;
   margin-left: 35%;
+  padding-right: 20px;
   font-size: 18px;
 }
 
@@ -85,55 +95,82 @@ h3 span{
 
 /*-----------------------type-area----------------------------*/
 
-.type-area{
-  position: relative;
+
+.type-inner{
+  display: flex;
+  justify-content: center;
+  margin: 100px auto;
+  padding: 0 5%;
   background-image:
-  url(../images/about6.png),
-  url(../images/about9.jpg);
+  url(../images/lager.png),
+  url(../images/ale.png);
   background-repeat:
   no-repeat,no-repeat;
   background-position:
-   left -100px top 130px ,right -10px top 130px;
+   left -120px bottom 0px ,right -70px bottom 0px;
+   background-size: contain;
 }
 
-.type-inner{
-  margin: 100px auto;
-  padding: 0 5%;
-}
-
-.or-area,
-.feature-area,
-.fermentation-area{
-  display: flex;
-  justify-content: center;
-}
-
-.type-inner h4{
-  margin: auto 10px;
-  width: 130px;
-  height: auto;
+#each-title{
+  width: 10%;
   order: 2;
-  font-size: 40px;
-  color: #000;
+  padding-top: 120px;
 }
 
-.lager,
-.ale{
-  width: 350px;
+#each-title p:first-child{
+  line-height: 168px;
+  height: 168px;
+}
+
+#each-title p:nth-child(2){
+  line-height: 190px;
+  height: 190px;
+  margin-top: 40px;
+}
+
+#each-title p:last-child{
+  line-height: 100px;
+  height: 100px;
+  margin-top: 40px;
+}
+
+#lager,
+#ale{
+  width: 45%;
   height: auto;
-  margin-bottom: 30px;
-  padding: 20px;
+  font-size: 1.5rem;
+}
+
+#lager{
+  order: 1;
+  background-image:
+}
+
+#ale{
+  order: 3
+}
+
+.type,
+.feature,
+.fermentation{
+  width: 70%;
   border: 5px solid #fff;
-  border-radius: 5px;
-  font-size: 15px
+  border-radius: 10px;
+  margin: 40px auto 20px;
+  padding: 10px;
 }
 
-.lager{
-  order: 1
+.type{
+  height: 168px;
 }
 
-.ale{
-  order: 3;
+.feature{
+  padding: 15px 10px;
+  height: 190px;
+}
+
+#so{
+  margin-top: 50px;
 }
 
 /*-----------------------details-slide----------------------------*/
@@ -143,8 +180,12 @@ h3 span{
   height: 200px;
 }
 
-#details-slide .inner{
+#details-slide{
+  padding-bottom: 200px;
   background-color: #f56d00;
+}
+
+#details-slide .inner{
 }
 
 #details-slide .content-area{
@@ -158,7 +199,6 @@ h3 span{
 .right{
   display: flex;
   justify-content: space-between;
-  position: relative;
   margin-top: 150px
 }
 
@@ -173,49 +213,318 @@ h3 span{
 .photo-area{
   width: 50%;
   height: auto;
+  position: relative;
+}
+
+.photo-area .beer-name{
+  position: absolute;
+  z-index: 50;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.photo-area .beer-photo{
+  width: 60%;
+  height: auto;
+  margin: auto;
+}
+
+.photo-area img{
+
 }
 
 .text-area{
-  width: 40%;
+  width: 50%;
   height: auto;
+  padding: 50px 0 0 30px;
+}
+
+.text-area h4{
+  font-size: 3.2rem;
+  text-align: left;
+  margin-bottom: 50px;
 }
 
 .text-area p{
   text-align: left;
+  font-size: 1.7rem;
+  line-height: 35px;
 }
 
-.photo-area h4{
-  position: absolute;
-  top: 100px;
-  z-index: 50;
+.details-text{
+  margin-top: 30px;
 }
 
-.photo-area p{
-  position: relative;
-  margin: 0 auto;
-  width: 60%;
-  height: auto;
+#pale-ale .beer-name{
+  font-size: 20vw;
+  line-height: 17vw;
+  letter-spacing: -2vw;
 }
 
-#pale-ale h4{
-  font-size: 270px;
-  line-height: 220px;
-  letter-spacing: -25px;
+#ipa .beer-name{
+  top: 70px;
+  font-size: 20vw;
+  letter-spacing: -2vw;
 }
 
-#ipa h4{
-  font-size: 330px;
-  line-height: 330px;
-  letter-spacing: -25px;
+#belgian-white .beer-name{
+  font-size: 13vw;
+  line-height: 13vw;
+  letter-spacing: -1vw;
 }
 
-#belgian-white h4{
-  font-size: 180px;
-  line-height: 180px;
-  letter-spacing: -20px;
+#stout .beer-name{
+  font-size: 15vw;
+  letter-spacing: -1vw;
 }
 
-#stout h4{
-  font-size: 200px;
-  line-height: 200px;
+
+
+/*-----------------------responsive----------------------------*/
+
+
+
+
+@media screen and (min-width:768px) and (max-width:959px){
+
+  #what-slide .truth-area{
+    padding: 100px 0;
+    margin-bottom: 120px;
+  }
+
+  #what-slide .content-area{
+    padding: 100px 0 50px;
+  }
+
+  .truth-area .truth-text{
+    width: 100%;
+    margin-left: 0;
+    padding: 0 5%;
+  }
+
+  .truth-text h3{
+    font-size: 3rem;
+  }
+
+  .truth-text p{
+    line-height: 4rem;
+  }
+
+  .type-inner{
+    margin-bottom: 0;
+    background-position:
+     left -210px bottom 0px ,right -150px bottom 0px;
+  }
+
+  .lager,
+  .ale{
+    width: 40%;
+    padding: 15px 10px;
+  }
+
+  #each-title p:nth-child(2){
+    height: 220px;
+    line-height: 220px;
+  }
+
+  #each-title p:last-child{
+    height: 140px;
+    line-height: 140px;
+  }
+
+  .feature{
+    height: 220px;
+  }
+
+  .text-area{
+    padding: 30px 0 0 30px;
+  }
+
+  .text-area h4{
+    margin-bottom: 30px;
+  }
+
+  .text-area p{
+    font-size: 1.4rem;
+    line-height: 25px;
+  }
+
+
+}
+
+@media screen and (min-width:320px) and (max-width:767px){
+
+  #what-slide .definition-area{
+    width: 70%;
+    font-size: calc(1.4rem + ((1vw - 0.32rem) * 2.2543));
+    line-height: 40px;
+    margin: 0 auto 100px;
+  }
+
+  #what-slide .truth-area{
+    padding: 100px 0;
+    margin-bottom: 120px;
+  }
+
+  #what-slide .content-area{
+    padding: 100px 0 50px;
+  }
+
+  .truth-area .truth-text{
+    width: 100%;
+    margin-left: 0;
+    padding: 0 5%;
+  }
+
+  .truth-text h3{
+    font-size: calc(3rem + ((1vw - 0.32rem) * 4.4743));
+    text-align: left;
+  }
+
+  .truth-text p{
+    font-size: calc(1.3rem + ((1vw - 0.32rem) * 1.56));
+    line-height: calc(2.2rem + ((1vw - 0.32rem) * 1.5659));
+  }
+
+  .type-area h3{
+    font-size: calc(2.3rem + ((1vw - 0.32rem) * 1.1185));
+
+  }
+
+  .type-inner{
+    display: block;
+    background-image: none;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  #each-title{
+    display: none;
+  }
+
+  #lager,
+  #ale{
+    width: 100%;
+    height: auto;
+    margin: 50px 0 80px;
+    padding: 0 5%;
+  }
+
+  #lager{
+    background-image: url(../images/lager.png);
+    background-repeat: no-repeat;
+    background-position: top 0px left -200px;
+  }
+
+  #ale{
+    background-image: url(../images/ale.png);
+    background-repeat: no-repeat;
+    background-position: top 0px right -160px;
+  }
+
+  h4{
+    font-size: calc(3rem + ((1vw - 0.32rem) * 1.1185));
+    line-height: calc(3rem + ((1vw - 0.32rem) * 1.1185));
+  }
+
+  h4 span{
+    font-size: calc(2rem + ((1vw - 0.32rem) * 1.1185))
+  }
+
+  .type,
+  .feature,
+  .fermentation{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 60px;
+  }
+
+  #lager .type::before,
+  #ale .type::before{
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 60px;
+    height: auto;
+    background-color: #f1a725;
+    content: "種類";
+    font-size: calc(1.5rem + ((1vw - 0.32rem) * 0.8163));
+    color: #fff;
+  }
+
+  #lager .feature::before,
+  #ale .feature::before{
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 60px;
+    height: auto;
+    background-color: #f1a725;
+    content: "特徴";
+    font-size: calc(1.5rem + ((1vw - 0.32rem) * 0.8163));
+    color: #fff;
+  }
+
+  #lager .fermentation::before,
+  #ale .fermentation::before{
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 60px;
+    height: auto;
+    background-color: #f1a725;
+    content: "発酵";
+    font-size: calc(1.5rem + ((1vw - 0.32rem) * 0.8163));
+    color: #fff;
+  }
+
+  .type p,
+  .feature p,
+  .fermentation p{
+    font-size: calc(1.2rem + ((1vw - 0.32rem) * 0.4474))
+  }
+
+  #so{
+    font-size: calc(2rem + ((1vw - 0.32rem) * 1.1185))
+  }
+
+  .left,
+  .right{
+    display: block;
+    margin-top: 80px;
+  }
+
+  .photo-area{
+    margin: 0 auto;
+  }
+
+  .text-area{
+    width: 100%;
+    padding: 30px 0px;
+  }
+
+  .text-area h4{
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .text-area p{
+    font-size: 1.3rem;
+    line-height: 25px;
+    text-align: center;
+  }
+
+
+
 }

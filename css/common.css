@@ -284,4 +284,15 @@ footer .logo{
     right: 20px;
   }
 
+  footer .logo{
+    width: 20%;
+    height: auto;
+    min-width: 70px;
+    max-width: 130px;
+  }
+
+  footer p{
+    font-size: calc(0.8rem + ((1vw - 0.32rem) * 0.4314));
+  }
+
 }
