@@ -51,10 +51,11 @@ h4 span{
   height: 200px;
 }
 
+
 #shops-slide .content-area{
   width: 100%;
   height: auto;
-  padding: 0 5%;
+  padding: 0 5% 100px;
   background-color: #f1a725;
   font-size: 24px;
   font-weight: bold;
